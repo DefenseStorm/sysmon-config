@@ -335,6 +335,8 @@
 
 		<NetworkConnect onmatch="exclude">
 			<!--COMMENT: Unfortunately, these exclusions are very broad and easily abused, but it's a limitation of Sysmon rules that they can't be more specific as they're in user folders-->
+            <Image condition="image">C:\Program Files (x86)\DefenseStorm\Agent\DefenseStorm.WindowsAgent.exe</Image>
+			<Image condition="image">OneDrive.exe</Image> <!--Microsoft:OneDrive-->
 			<Image condition="image">Spotify.exe</Image> <!--Spotify-->
 			<Image condition="end with">AppData\Roaming\Dropbox\bin\Dropbox.exe</Image> <!--Dropbox-->
 			<Image condition="image">g2ax_comm_expert.exe</Image> <!--GoToMeeting-->
