@@ -5,10 +5,10 @@
   Master project:	https://github.com/SwiftOnSecurity/sysmon-config
   Master license:	Creative Commons Attribution 4.0 | You may privatize, fork, edit, teach, publish, or deploy for commercial use - with attribution in the text.
 
-  Fork version:	<N/A>
-  Fork author:	<N/A>
-  Fork project:	<N/A>
-  Fork license:	<N/A>
+  Fork version:	0.1
+  Fork author:	DefenseStorm
+  Fork project:	https://github.com/DefenseStorm/sysmon-config/
+  Fork license:	Creative Commons Attribution 4.0 | You may privatize, fork, edit, teach, publish, or deploy for commercial use - with attribution in the text.
 
   REQUIRED: Sysmon version 7.01 or higher (due to changes in registry syntax and bug-fixes)
 	https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
@@ -251,20 +251,7 @@
 		<!--COMMENT:	[ https://attack.mitre.org/wiki/Technique/T1099 ] -->
 
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, TargetFilename, CreationUtcTime, PreviousCreationUtcTime-->
-		<FileCreateTime onmatch="include">
-			<Image condition="begin with">C:\Users</Image> <!--Look for timestomping in user area-->
-		</FileCreateTime>
-
-		<FileCreateTime onmatch="exclude">
-			<Image condition="image">OneDrive.exe</Image> <!--OneDrive constantly changes file times-->
-			<Image condition="image">C:\Windows\system32\backgroundTaskHost.exe</Image>
-			<Image condition="contains">setup</Image> <!--Ignore setups-->
-			<Image condition="contains">install</Image> <!--Ignore setups-->
-			<Image condition="contains">Update\</Image> <!--Ignore setups-->
-			<Image condition="end with">redist.exe</Image> <!--Ignore setups-->
-			<Image condition="is">msiexec.exe</Image> <!--Ignore setups-->
-			<Image condition="is">TrustedInstaller.exe</Image> <!--Ignore setups-->
-		</FileCreateTime>
+		<!-- Disabled -->
 
 	<!--SYSMON EVENT ID 3 : NETWORK CONNECTION INITIATED [NetworkConnect]-->
 		<!--COMMENT:	By default this configuration takes a very conservative approach to network logging, limited to only extremely high-signal events.-->
