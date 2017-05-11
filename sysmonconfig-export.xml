@@ -258,7 +258,9 @@
 		<!--COMMENT:	[ https://attack.mitre.org/wiki/Technique/T1099 ] -->
 
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, TargetFilename, CreationUtcTime, PreviousCreationUtcTime-->
-		<!-- Disabled -->
+        <FileCreateTime onmatch="include">
+            <!-- Disabled -->
+        </FileCreateTime>
 
 	<!--SYSMON EVENT ID 3 : NETWORK CONNECTION INITIATED [NetworkConnect]-->
 		<!--COMMENT:	By default this configuration takes a very conservative approach to network logging, limited to only extremely high-signal events.-->
