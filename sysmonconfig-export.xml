@@ -81,6 +81,12 @@
 			<Image condition="is">C:\Windows\system32\musNotificationUx.exe</Image> <!--Microsoft:Windows: Update pop-ups-->
 			<Image condition="is">C:\Windows\system32\powercfg.exe</Image> <!--Microsoft:Power configuration management-->
 			<Image condition="is">C:\Windows\system32\sndVol.exe</Image> <!--Microsoft:Windows: Volume control-->
+			<Image condition="is">C:\Windows\System32\schtasks.exe</Image> <!--Microsoft:Scheduled tasks-->
+			<Image condition="is">C:\Windows\System32\taskhost.exe</Image> <!--Microsoft:Windows tasks-->
+			<Image condition="is">C:\Windows\System32\wbem\WmiApSrv.exe</Image> <!--Microsoft:Windows: WMI performance adpater host process-->
+			<Image condition="is">C:\Windows\System32\wermgr.exe</Image> <!--Microsoft:Windows:Windows error reporting/telemetry-->
+			<Image condition="is">C:\Windows\System32\wsqmcons.exe</Image> <!--Microsoft:Windows:Windows SQM Consolidator-->
+			<Image condition="is">C:\Windows\SysWOW64\wermgr.exe</Image> <!--Microsoft:Windows:Windows error reporting/telemetry-->
 			<Image condition="is">C:\Windows\system32\sppsvc.exe</Image> <!--Microsoft:Windows: Software Protection Service-->
 			<Image condition="is">C:\Windows\system32\wbem\WmiApSrv.exe</Image> <!--Microsoft:Windows: WMI performance adapter host process-->
 			<Image condition="is">C:\Windows\System32\plasrv.exe</Image> <!--Microsoft:Windows:Performance Logs and Alerts DCOM Server-->
@@ -185,6 +191,7 @@
 			<Image condition="is">C:\Program Files (x86)\Microsoft Office\root\Office16\officebackgroundtaskhandler.exe</Image>
 			<!--SECTION: Microsoft:Office:Click2Run-->
 			<Image condition="is">C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeC2RClient.exe</Image> <!--Microsoft:Office: Background process-->
+			<Image condition="is">C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe</ParentImage> <!--Microsoft:Office: Background process-->
 			<ParentImage condition="end with">C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe</ParentImage> <!--Microsoft:Office: Background process-->
 			<ParentImage condition="is">C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeC2RClient.exe</ParentImage> <!--Microsoft:Office: Background process-->
 			<!--SECTION: Microsoft:Windows: Media player-->
